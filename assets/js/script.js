@@ -10,7 +10,6 @@ createApp({
   }, 
   
   created(){
-    setInterval("location.reload()",2000);
     this.loadData()
   },
   
