@@ -1,3 +1,4 @@
+
 const { createApp } = Vue
 
 createApp({
@@ -11,11 +12,9 @@ createApp({
   
   created(){
     this.loadData()
-   
   },
   
   methods: {
-
     loadData(){
         axios.get("https://randomuser.me/api/")
         .then(response => {
@@ -23,6 +22,9 @@ createApp({
         
         })
     },
+    changeProfile(){
+     location.reload()
+  },
 }
    
 }).mount("#app")
