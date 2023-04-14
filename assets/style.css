@@ -1,0 +1,23 @@
+body{
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./img/background.jpg");
+}    
+
+#resultado-operacion{
+   background-color: #272727;
+   color:#272727; 
+}
+
+.fa-brands{font-size: 2rem;
+color: white;}
+
+/*
+.fa-linkedin:hover{
+   color: rgb(71, 131, 177);
+   cursor: pointer;}
+.fa-instagram:hover{
+   color: rgb(234, 34, 70);
+   cursor: pointer;}
+*/
+h4 {color:white;
+font-weight: bold;
+text-shadow: 2px 2px 10px black;}
