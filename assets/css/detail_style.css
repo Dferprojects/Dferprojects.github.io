@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+}
+
+header{
+    height: 10vh;
+    background-color:#9f3647;
+}
+footer{
+    height: 15vh;
+    background-color:#9f3647;
+}
+
+.main__detail{
+    background-color: black;
+    height: 190vh;
+}
+
+.section1__detail{
+    height: 30rem;
+    background-image: linear-gradient(rgba(92, 90, 90, 0.6), rgba(92, 90, 90, 0.6)), url("../images/marito.png");
+    background-repeat: no-repeat;
+    background-size: auto 40rem;
+    background-position: center;
+}
+
+.img__detail img{
+    border-radius: 20px;
+    
+}
+
+.container__detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:4rem;
+    position: relative;
+    top: 8rem;
+
+}
+
+.container__text{
+    width:40rem;
+}
+
+.movie__container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section2__detail{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 10rem;
+    }
+
+td{
+    padding: 10px 1rem;
+    font-size: 1.2rem;
+}
+
+
+.social__detail li{list-style-type: none;}
+
+.social__detail ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;}
+
+.social__detail i{font-size: 2.5rem;}
+
+/*FONTS*/
+.text__detail h1{font-size: 2.2rem;}
+.text__detail div{padding: 1rem 0;}
+
+iframe{
+    width: 35rem;
+    height: 20rem;
+}
+/*RESPOINSIVE - MEDIA QUERIES*/
+@media(max-width: 768px){
+    .container__detail, .section2__detail{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section1__detail{
+        height: 28rem;
+        background-size: cover;
+    }
+    .section2__detail{
+        padding: 1rem 0;
+    }
+    .img__detail img{
+        width: 12rem;
+
+    }
+    .text__detail h1{font-size: 1rem;}
+    .text__detail h2{font-size: 0.9rem;}
+    .container__text{width:20rem;}
+    .container__detail{
+        position:relative;
+        top:1rem;
+    }
+    iframe{
+        width: 45rem;
+        height: 20rem;
+    }
+    .main__detail{
+        background-color: black;
+        height: 270vh;
+    }
+    .social__detail i{font-size: 2rem;}
+    
+    .last__detail{
+        width: 45rem;
+    }
+    .stats__detail{display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    }
+    td{
+        font-size: 1.1rem;}
+}
+
+@media (max-width:426px){
+    .section1__detail{
+        height: 50rem;
+        background-size: cover;
+    }
+    .main__detail{
+        background-color: black;
+        height: 330vh;
+    }
+    iframe{
+        width:25rem;
+        height: 15rem;
+    }
+    .social__detail i{font-size: 1.5rem;}
+}
