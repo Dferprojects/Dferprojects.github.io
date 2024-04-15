@@ -112,7 +112,7 @@ iframe{
     }
     .main__detail{
         background-color: black;
-        height: 270vh;
+        height: 70rem;
     }
     .social__detail i{font-size: 2rem;}
     
@@ -145,17 +145,19 @@ iframe{
 }
 
 @media (max-width:426px){
-    .section1__detail{
-        height: 50rem;
-        background-size: cover;
-    }
     .main__detail{
         background-color: black;
-        height: 330vh;
+        height: 90rem;
     }
     iframe{
         width:25rem;
         height: 15rem;
     }
-    .social__detail i{font-size: 1.5rem;}
+    
+}
+
+@media (max-width:1024px){
+    .main__detail{
+        height: 70rem;
+    }
 }
