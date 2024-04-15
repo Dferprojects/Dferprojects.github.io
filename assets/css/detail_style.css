@@ -83,7 +83,7 @@ iframe{
     height: 20rem;
 }
 /*RESPOINSIVE - MEDIA QUERIES*/
-@media(max-width: 768px){
+@media (max-width: 768px){
     .container__detail, .section2__detail{
         display: flex;
         flex-wrap: wrap;
@@ -126,6 +126,22 @@ iframe{
     }
     td{
         font-size: 1.1rem;}
+}
+
+@media (max-width:540px){
+    .section1__detail{
+        height: 50rem;
+        background-size: cover;
+    }
+    .main__detail{
+        background-color: black;
+        height: 190vh;
+    }
+    iframe{
+        width:32rem;
+        height: 15rem;
+    }
+    .social__detail i{font-size: 1.5rem;}
 }
 
 @media (max-width:426px){
