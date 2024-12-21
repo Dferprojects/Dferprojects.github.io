@@ -1,3 +1,6 @@
+import { createAside } from "./aside.js";
+import { contador } from "./contador-carrito.js";
+
 function cutTitle(str){
     return str.split(' ').slice(0, 3).join(' ');
     }
@@ -46,17 +49,35 @@ export function createModal(prod){
             setTimeout(()=>{
               let carritoId = document.querySelector(`#btn-cart-${prod.id}`);
               carritoId.onclick = () => {
-                prod.quantity = 1;
-                console.log(prod);
-
-                //JSON.stringify hace el parseo de objeto a string
-                localStorage.setItem("agregadoAlCarrito", JSON.stringify(prod));
+                Swal.fire({
+                  position: "center",
+                  icon: "success",
+                  title: "Added to cart successfully!",
+                  showConfirmButton: false,
+                  timer: 2000
+                });
+                
                 //Leer datos del localStorage con getitem
-              console.log(JSON.parse(localStorage.getItem("agregadoAlCarrito")));
+                
+                let objLocalStorage = JSON.parse(localStorage.getItem("productosCarrito")) || [];
+                let productoExiste = objLocalStorage.find((e) => e.id === prod.id);
+                let index = objLocalStorage.findIndex((p) => p.id === prod.id);
+                
+                if(productoExiste){
+                  productoExiste.quantity += 1;
+                  objLocalStorage[index] = productoExiste;
+                } else {
+                  prod.quantity = 1;
+                  objLocalStorage.push(prod);
+                }
+                   //JSON.stringify hace el parseo de objeto a string
+                //localstorage solo admite string
+                localStorage.setItem("productosCarrito", JSON.stringify(objLocalStorage));
+                createAside();
+                contador();
               }
 
-            })
-
+            }, 0 );
 
             const myModal = new bootstrap.Modal(modalContainer);
             myModal.show();
